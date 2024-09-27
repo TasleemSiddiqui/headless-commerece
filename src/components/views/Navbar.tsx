@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import logo from "@/public/assets/logo.png";
 import SearchBar from "../widgets/SearchBar";
-import { Heart, LogIn, ShoppingBag, User } from "lucide-react";
+import { Heart, ShoppingBag, User } from "lucide-react";
 import {
   HoverCard,
   HoverCardContent,

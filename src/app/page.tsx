@@ -1,7 +1,7 @@
 
 import MobSlider from "@/components/widgets/MobSlider";
 import Slider from "@/components/widgets/Slider";
-import HeroSlider from "@/components/widgets/Slider";
+
 
 
 
