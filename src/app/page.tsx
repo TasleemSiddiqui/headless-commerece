@@ -8,6 +8,7 @@ import HeroSlider from "@/components/widgets/Slider";
 export default function Home() {
   return (
     <main>
+      
      <div className="hidden lg:block">
      <Slider />
      </div>

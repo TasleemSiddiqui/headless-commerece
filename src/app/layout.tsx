@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/views/Footer2";
 import Navbar from "@/components/views/Navbar";
 import Header from "@/components/views/Header";
+import Wrapper from "@/components/shared/Wrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 // const geistSans = localFont({
@@ -34,11 +35,13 @@ export default function RootLayout({
         className={inter.className}
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <Navbar />
+        <Wrapper>
+          <Header />
+          <Navbar />
 
-        {children}
-        <Footer />
+          {children}
+          <Footer />
+        </Wrapper>
       </body>
     </html>
   );
