@@ -10,7 +10,7 @@ const SearchBar: React.FC = () => {
     <div className="flex items-center border border-gray-300 rounded-lg p-2 shadow-md">
       {/* Search Input */}
       <div className="flex items-center w-full">
-        <Search className="text-gray-500 ml-2" />
+        <Search className="hidden md:block text-gray-500 ml-2" />
         <Input 
           type="text" 
           placeholder="Search" 
@@ -19,8 +19,8 @@ const SearchBar: React.FC = () => {
       </div>
 
       {/* Category Select Dropdown */}
-      <Select >
-        <SelectTrigger className="mx-4 w-36 border-none shadow-none">
+      <Select  >
+        <SelectTrigger className="hidden md:flex mx-4 w-36 border-none shadow-none">
           <SelectValue placeholder="All Categories" />
         </SelectTrigger>
         <SelectContent>
@@ -33,8 +33,11 @@ const SearchBar: React.FC = () => {
       </Select>
 
       {/* Search Button */}
-      <Button className="bg-primary-theme hover:bg-primary-theme/40 text-white px-4 py-2 rounded-lg">
-        SEARCH
+      <Button className="hidden md:block bg-primary-theme hover:bg-primary-theme/40 text-white px-4 py-2 rounded-lg">
+        Search
+      </Button>
+      <Button className="block md:hidden bg-primary-theme hover:bg-primary-theme/40 text-white px-4 py-2 rounded-lg">
+       <Search size={10}/>
       </Button>
     </div>
   );

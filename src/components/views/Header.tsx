@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center px-4 py-3 bg-white border-b-2">
+    <header className="hidden md:flex justify-between items-center px-4 py-3 bg-white border-b-2">
       <div>
         <ul className="flex gap-x-4">
           <li className="link">

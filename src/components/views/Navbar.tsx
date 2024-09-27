@@ -86,7 +86,7 @@ const pageItems: IPage[] = [
 
 const Navbar = () => {
   return (
-    <div className="flex flex-col  px-4 py-5">
+    <div className="hidden lg:flex flex-col  px-4 py-5">
       {/* navigation header */}
       <div className="grid grid-cols-3 w-full">
         {/* logo */}
@@ -184,7 +184,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* navigation bar */}
-      <div className="flex flex-wrap pt-5 gap-24">
+      <div className="flex pt-5 gap-24 line-clamp-1">
         <div className="">
             {
                 categoryItems.map((item) => (

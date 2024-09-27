@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-theme2 text-white pt-10">
+    <footer className="bg-primary-theme2 text-white pt-10 text-center">
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
         {/* About Us */}
         <div>

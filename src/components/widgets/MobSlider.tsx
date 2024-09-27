@@ -70,13 +70,14 @@ export default function MobSlider() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center text-center items-center bg-primary-theme2 mx-auto p-4 md:p-12 h-fit">
+    <div className="flex flex-col-reverse gap-y-4 md:flex-row justify-center text-center items-center bg-primary-theme2 mx-auto p-4 md:p-12 h-fit">
       {/* Left Content */}
       <div className="flex-1 text-white px-4 md:px-8 mb-8 md:mb-0">
         <div
-          className={`transition-transform duration-300 ease-in-out transform ${
-            animating ? "translate-x-[-100%]" : "translate-x-0"
-          }`}
+       
+          // className={`transition-transform duration-300 ease-in-out transform ${
+          //   animating ? "translate-x-[-100%]" : "translate-x-0"
+          // }`}
         >
           <h2 className="text-sm uppercase font-semibold mb-2">
             {contentData[currentIndex]?.title}
@@ -102,9 +103,9 @@ export default function MobSlider() {
         <div className="flex w-full justify-between h-full rounded-lg overflow-hidden relative">
           {/* Current Image */}
           <div
-            className={`transition-transform duration-500 ease-in-out transform ${
-              animating ? "translate-x-[-100%]" : "translate-x-0"
-            } w-full h-full rounded-lg overflow-hidden relative`}
+            // className={`transition-transform duration-500 ease-in-out transform ${
+            //   animating ? "translate-x-[-100%]" : "translate-x-0"
+            // } w-full h-full rounded-lg overflow-hidden relative`}
           >
             <Image
               src={contentData[currentIndex].image}

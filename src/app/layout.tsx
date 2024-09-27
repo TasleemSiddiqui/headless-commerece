@@ -6,6 +6,7 @@ import Footer from "@/components/views/Footer2";
 import Navbar from "@/components/views/Navbar";
 import Header from "@/components/views/Header";
 import Wrapper from "@/components/shared/Wrapper";
+import MobNav from "@/components/views/MobNav";
 const inter = Inter({ subsets: ["latin"] });
 
 // const geistSans = localFont({
@@ -37,6 +38,7 @@ export default function RootLayout({
       >
         <Wrapper>
           <Header />
+          <MobNav/>
           <Navbar />
 
           {children}

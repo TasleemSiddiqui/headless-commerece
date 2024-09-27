@@ -75,7 +75,7 @@ export default function Hero() {
       <div className="flex-1 text-white px-8 overflow-hidden">
         <div
           className={`transition-transform duration-500 ease-in-out transform ${
-            animating ? "translate-x-[500%]" : "translate-x-0"
+            animating ? "translate-x-[-500%]" : "translate-x-0"
           }`}
         >
           <h2 className="text-sm uppercase font-semibold mb-2">
@@ -103,7 +103,7 @@ export default function Hero() {
           {/* Current Image */}
           <div
             className={`transition-transform duration-500 ease-in-out transform ${
-              animating ? "translate-x-[20%] pl-96" : "translate-x-0 p-0"
+              animating ? "translate-x-[-100%] pl-96" : "translate-x-0 p-0"
             } w-1/2 h-full rounded-lg overflow-hidden relative`}
           >
             <Image
@@ -119,7 +119,7 @@ export default function Hero() {
           <div
             className={`w-[200px] transition-transform duration-500 ease-in-out transform ${
               animating
-                ? "translate-x-[-50%] "
+                ? "translate-x-[100%] "
                 : "translate-x-0 "
             } w-1/2 h-full rounded-lg overflow-hidden relative`}
           >
