@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import logo from "@/public/assets/logo.png";
-import SearchBar from "../widgets/SearchBar";
+
 import { Heart, ShoppingBag, User } from "lucide-react";
 import {
   HoverCard,
@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/hover-card";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import Search from "@/components/widgets/SearchBar";
 
 interface ICategory {
   id: number;
@@ -101,7 +102,9 @@ const Navbar = () => {
         </div>
         {/* SearchBar */}
         <div>
-          <SearchBar />
+          {/* <SearchBar /> */}
+
+          <Search />
         </div>
 
         <div className="flex flex-wrap gap-6 justify-center items-center">
@@ -186,34 +189,28 @@ const Navbar = () => {
       {/* navigation bar */}
       <div className="flex pt-5 gap-24 line-clamp-1">
         <div className="">
-            {
-                categoryItems.map((item) => (
-                  <Link
-                    href={item.link}
-                    key={item.id}
-                    className="duration-300 hover:border-b-[1px] border-primary-theme py-4 mx-3 font-semibold hover:text-primary-theme/100"
-                  >
-                    {item.name}
-                  </Link>))
-                
-            }
+          {categoryItems.map((item) => (
+            <Link
+              href={item.link}
+              key={item.id}
+              className="duration-300 hover:border-b-[1px] border-primary-theme py-4 mx-3 font-semibold hover:text-primary-theme/100"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
-        <div className="space-x-12 text-muted-foreground">
-            |
-        </div>
-        
+        <div className="space-x-12 text-muted-foreground">|</div>
+
         <div>
-        {
-                pageItems.map((item) => (
-                  <Link
-                    href={item.link}
-                    key={item.id}
-                    className="duration-300 hover:border-b-[1px] border-primary-theme py-4 mx-6"
-                  >
-                    {item.name}
-                  </Link>))
-                
-            }
+          {pageItems.map((item) => (
+            <Link
+              href={item.link}
+              key={item.id}
+              className="duration-300 hover:border-b-[1px] border-primary-theme py-4 mx-6"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
       </div>
     </div>
