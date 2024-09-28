@@ -70,7 +70,7 @@ export default function MobSlider() {
   };
 
   return (
-    <div className="flex flex-col-reverse gap-y-4 md:flex-row justify-center text-center items-center bg-primary-theme2 mx-auto p-4 md:p-12 h-fit">
+    <div className="flex flex-col-reverse gap-y-4 md:flex-row justify-center text-center items-center bg-primary-theme2 mx-auto p-4 md:p-12 h-screen">
       {/* Left Content */}
       <div className="flex-1 text-white px-4 md:px-8 mb-8 md:mb-0">
         <div
@@ -79,10 +79,10 @@ export default function MobSlider() {
           //   animating ? "translate-x-[-100%]" : "translate-x-0"
           // }`}
         >
-          <h2 className="text-sm uppercase font-semibold mb-2">
+          <h2 className="text-sm uppercase font-semibold mb-2 line-clamp-1">
             {contentData[currentIndex]?.title}
           </h2>
-          <h1 className="text-2xl md:text-4xl font-bold mb-4">
+          <h1 className="text-2xl md:text-4xl font-bold mb-4 line-clamp-1">
             {contentData[currentIndex]?.title}
           </h1>
           <div className="flex gap-2 mb-4 text-4xl mx-auto md:text-5xl px-16 ">
@@ -90,7 +90,7 @@ export default function MobSlider() {
             <Footprints size={40} />
             <GraduationCap size={40} />
           </div>
-          <p className="mb-4">{contentData[currentIndex]?.description}</p>
+          <p className="mb-4 line-clamp-2">{contentData[currentIndex]?.description}</p>
           <Button variant={"secondary"} className="rounded-xl px-4 md:px-6 py-2 md:py-3 mt-4">
             MAN
           </Button>

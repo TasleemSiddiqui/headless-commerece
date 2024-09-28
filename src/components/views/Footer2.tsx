@@ -10,8 +10,8 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-theme2 text-white pt-10 text-center">
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="bg-primary-theme2 text-white pt-10   ">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 px-3 py-4">
         {/* About Us */}
         <div>
           <h2 className="font-bold text-lg">About Us</h2>
@@ -143,7 +143,7 @@ const Footer = () => {
           </div> */}
 
       {/* Copyright */}
-      <div className="text-center text-sm text-gray-300 mt-10 bg-black py-4">
+      <div className="text-center text-sm text-gray-300 mt-10 bg-black py-4 ">
         &copy; {new Date().getFullYear()} Gulf Style | Powered by XYZ Solutions
       </div>
     </footer>
