@@ -1,4 +1,5 @@
 
+import HeadingBar from "@/components/shared/HeadingBar";
 import MobSlider from "@/components/widgets/MobSlider";
 import Slider from "@/components/widgets/Slider";
 
@@ -15,6 +16,7 @@ export default function Home() {
      <div className="block lg:hidden">
       <MobSlider/>
      </div>
+     <HeadingBar heading="Taxing Laughter:" subHeading="The People of the Kingdom"/>
      <div className="h-screen ">
 
      </div>

@@ -70,7 +70,7 @@ export default function MobSlider() {
   };
 
   return (
-    <div className="flex flex-col-reverse gap-y-4 md:flex-row justify-center text-center items-center bg-primary-theme2 mx-auto p-4 md:p-12 h-screen">
+    <div className="flex flex-col-reverse gap-y-4 md:flex-row justify-center text-center items-center bg-primary-theme2 mx-auto p-4 md:p-12 h-fit">
       {/* Left Content */}
       <div className="flex-1 text-white px-4 md:px-8 mb-8 md:mb-0">
         <div
