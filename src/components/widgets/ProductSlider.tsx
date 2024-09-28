@@ -10,8 +10,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Hproduct from "@/public/assets/products/product18c-306x442.webp";
-import product1 from "@/public/assets/products/product18a.webp";
 import ProductCard from "../shared/ProductCard";
 import { StaticImageData } from "next/image";
 

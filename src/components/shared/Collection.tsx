@@ -7,7 +7,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { Button } from "../ui/button";
 import { GoPlus } from "react-icons/go";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Image, { StaticImageData } from "next/image";

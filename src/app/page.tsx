@@ -1,5 +1,4 @@
 import HeadingBar from "@/components/shared/HeadingBar";
-import ProductCard from "@/components/shared/ProductCard";
 import MobSlider from "@/components/widgets/MobSlider";
 import ProductSlider from "@/components/widgets/ProductSlider";
 import Slider from "@/components/widgets/Slider";
@@ -10,7 +9,6 @@ import Collection from "@/components/shared/Collection";
 import p1 from "@/public/assets/products/pexels-3motional-studio-407102-1081685.jpg"
 import p2 from "@/public/assets/products/pexels-anastasiya-gepp-654466-2065203.jpg"
 import p3 from "@/public/assets/products/pexels-kqpho-1921168.jpg"
-import p4 from "@/public/assets/products/pexels-pixabay-247322.jpg"
 
 
 

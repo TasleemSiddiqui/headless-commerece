@@ -18,7 +18,7 @@ const contentData = [
   {
     title: "Unleash the stylish man within",
     description:
-      "Discover the latest in men’s fashion with our wide selection of stylish clothing.",
+      "Discover the latest in men's fashion with our wide selection of stylish clothing.",
     image: slide1,
   },
   {
