@@ -1,19 +1,27 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Search as SearchIcon } from 'lucide-react';
+import React, { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Search as SearchIcon } from "lucide-react";
 
 const SearchBar: React.FC = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
   // State to manage search query and category, defaulting to "all" for category
-  const [searchQuery, setSearchQuery] = useState(searchParams?.get('q') || '');
-  const [category, setCategory] = useState(searchParams?.get('category') || 'all');
+  const [searchQuery, setSearchQuery] = useState(searchParams?.get("q") || "");
+  const [category, setCategory] = useState(
+    searchParams?.get("category") || "all"
+  );
 
   // Function to handle form submission
   const handleSearch = (e: React.FormEvent) => {
@@ -23,7 +31,7 @@ const SearchBar: React.FC = () => {
     if (searchQuery.trim()) {
       queryParams.q = searchQuery;
     }
-    if (category.trim() && category !== 'all') {
+    if (category.trim() && category !== "all") {
       queryParams.category = category;
     }
 
@@ -33,7 +41,10 @@ const SearchBar: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSearch} className="flex items-center border border-gray-300 rounded-lg p-2 shadow-md">
+    <form
+      onSubmit={handleSearch}
+      className="flex items-center border border-gray-300 rounded-lg p-2 shadow-md"
+    >
       {/* Search Input */}
       <div className="flex items-center w-full gap-2">
         <SearchIcon className="hidden md:block text-gray-500 " />

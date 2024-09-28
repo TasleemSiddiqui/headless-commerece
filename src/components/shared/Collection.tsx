@@ -62,7 +62,7 @@ const Collection: React.FC<Content> = ({ heading, title, link, images, backgroun
                   <div className="p-1">
                     <Card className="bg-transparent border-none shadow-none">
                       <CardContent className="flex bg-transparent items-center justify-center max-h-[400px] w-auto">
-                        <Image src={item.src} alt={item.alt} className="max-h-[400px] w-auto" />
+                        <Image src={item.src} alt={item.alt} width={400} height={400} objectFit="cover" className="max-h-[400px] w-auto" />
                       </CardContent>
                     </Card>
                   </div>
