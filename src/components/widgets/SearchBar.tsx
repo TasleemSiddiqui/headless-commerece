@@ -43,7 +43,7 @@ const SearchBar: React.FC = () => {
   return (
     <form
       onSubmit={handleSearch}
-      className="flex items-center border border-gray-300 rounded-lg p-2 shadow-md"
+      className="flex items-center border border-gray-300 rounded-lg p-2 shadow-md w-full"
     >
       {/* Search Input */}
       <div className="flex items-center w-full gap-2">
@@ -53,7 +53,7 @@ const SearchBar: React.FC = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search for products..."
-          className="border-none focus:ring-0 outline-none px-2 shadow-none w-full"
+          className="border-none  focus:ring-0 focus-visible:ring-0 outline-none px-2 shadow-none w-full"
         />
       </div>
 

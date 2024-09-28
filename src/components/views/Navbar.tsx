@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import logo from "@/public/assets/logo.png";
+import logo from "@/public/assets/logo2.png";
 
 import { Heart, ShoppingBag, User } from "lucide-react";
 import {
@@ -87,27 +87,27 @@ const pageItems: IPage[] = [
 
 const Navbar = () => {
   return (
-    <div className="hidden lg:flex flex-col  px-4 py-5">
+    <div className="hidden lg:flex flex-col   py-0 my-3 text-thin">
       {/* navigation header */}
-      <div className="grid grid-cols-3 w-full">
+      <div className="grid grid-cols-4 w-full px-2">
         {/* logo */}
         <div>
           <Image
             src={logo}
             alt="Logo"
-            width={80}
-            height={80}
+            width={200}
+            height={200}
             className="dark:text-white"
           />
         </div>
         {/* SearchBar */}
-        <div>
+        <div className="col-span-2">
           {/* <SearchBar /> */}
 
           <Search />
         </div>
 
-        <div className="flex flex-wrap gap-6 justify-center items-center">
+        <div className="flex pl-10  flex-wrap w-full justify-evenly items-center">
           <div className=" p-2 border rounded-full">
             <Heart className={`text-primary-theme`} />
           </div>
@@ -187,13 +187,13 @@ const Navbar = () => {
         </div>
       </div>
       {/* navigation bar */}
-      <div className="flex pt-5 gap-24 line-clamp-1">
+      <div className="flex items-center pt-5 gap-24 line-clamp-1 px-2">
         <div className="">
           {categoryItems.map((item) => (
             <Link
               href={item.link}
               key={item.id}
-              className="duration-300 hover:border-b-[1px] border-primary-theme py-4 mx-3 font-semibold hover:text-primary-theme/100"
+              className="duration-300 hover:border-b-[1px] border-primary-theme py-2 mx-3 font-semibold hover:text-primary-theme/100"
             >
               {item.name}
             </Link>
@@ -201,12 +201,12 @@ const Navbar = () => {
         </div>
         <div className="space-x-12 text-muted-foreground">|</div>
 
-        <div>
+        <div className="lg:ml-24 flex justify-evenly items-center p-0">
           {pageItems.map((item) => (
             <Link
               href={item.link}
               key={item.id}
-              className="duration-300 hover:border-b-[1px] border-primary-theme py-4 mx-6"
+              className="duration-300 hover:border-b-[1px] border-primary-theme py-2 lg:mx-5"
             >
               {item.name}
             </Link>
