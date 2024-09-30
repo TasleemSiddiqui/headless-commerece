@@ -1,4 +1,3 @@
-
 import HeadingBar from "@/components/shared/HeadingBar";
 import MobSlider from "@/components/widgets/MobSlider";
 import ProductSlider from "@/components/widgets/ProductSlider";

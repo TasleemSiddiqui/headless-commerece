@@ -70,7 +70,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="flex justify-center items-center bg-primary-theme2 mx-auto p-12 h-fit">
+    <div className="flex justify-center items-center bg-primary-theme2 mx-auto py-12 px-0  h-fit">
       {/* Left Content */}
       <div className="flex-1 text-white px-8 overflow-hidden">
         <div
@@ -104,23 +104,24 @@ export default function Hero() {
           <div
             className={`transition-transform duration-300 ease-in-out transform ${
               animating ? "translate-x-[-100%] pl-96" : "translate-x-0 p-0"
-            } w-1/2 h-full rounded-lg overflow-hidden relative`}
+            } w-1/2 h-full rounded-lg overflow-hidden relative min-w-[400px]`}
           >
             <Image
               src={contentData[currentIndex].image}
               alt={contentData[currentIndex].title}
               layout="fill"
               objectFit="cover"
-              className="rounded-lg"
+              className="rounded-lg "
+              
             />
           </div>
 
           {/* Next Image */}
           <div
-            className={`w-[200px] transition-transform duration-200 ease-in-out transform ${
+            className={`w-[200px] ml-24 transition-transform duration-200 ease-in-out transform ${
               animating
                 ? "translate-x-[100%] "
-                : "translate-x-0 "
+                : "translate-x-[0] "
             } w-1/2 h-full rounded-lg overflow-hidden relative`}
           >
             {currentIndex + 1 < contentData.length ? (
@@ -146,7 +147,7 @@ export default function Hero() {
             <ArrowLeft />
           </button>
         </div>
-        <div className="absolute top-1/2 right-1/2 transform -translate-y-1/2">
+        <div className="absolute top-1/2 right-[255px] transform -translate-y-1/2">
           <button
             onClick={handleNext}
             className="text-white bg-primary-theme2 p-3 rounded-md"

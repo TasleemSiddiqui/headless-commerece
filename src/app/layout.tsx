@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Footer from "@/components/views/Footer2";
+import Footer from "@/components/views/Footer";
 import Navbar from "@/components/views/Navbar";
 import Header from "@/components/views/Header";
 import Wrapper from "@/components/shared/Wrapper";
 import MobNav from "@/components/views/MobNav";
-const inter = Inter({ subsets: ["latin"] });
+import { Roboto } from "@next/font/google";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -19,6 +19,8 @@ const inter = Inter({ subsets: ["latin"] });
 //   variable: "--font-geist-mono",
 //   weight: "100 900",
 // });
+const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Headless e-Commerece",
@@ -33,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={inter.className}
+        className={roboto.className}
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Wrapper>
