@@ -104,7 +104,7 @@ const Navbar = () => {
         <div className="col-span-2">
           {/* <SearchBar /> */}
 
-          <Search />
+          {/* <Search /> */}
         </div>
 
         <div className="flex pl-10  flex-wrap w-full justify-evenly items-center">

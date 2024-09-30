@@ -7,7 +7,7 @@ import Navbar from "@/components/views/Navbar";
 import Header from "@/components/views/Header";
 import Wrapper from "@/components/shared/Wrapper";
 import MobNav from "@/components/views/MobNav";
-import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",

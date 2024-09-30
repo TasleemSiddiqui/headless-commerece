@@ -11,8 +11,27 @@ import p2 from "@/public/assets/products/pexels-anastasiya-gepp-654466-2065203.j
 import p3 from "@/public/assets/products/pexels-kqpho-1921168.jpg";
 
 const staticDummyData = {
-  heading: "Explore Our Collection",
-  title: "Latest Fashion Trends",
+  heading: "Find your signature style",
+  title: "Get Dressed to Impress with Our Men's Collection",
+  link: "/fashion", // Link to the relevant page
+  images: [
+    {
+      src: p1,
+      alt: "Stylish outfit in a city setting",
+    },
+    {
+      src: p2,
+      alt: "Model wearing trendy attire",
+    },
+    {
+      src: p3,
+      alt: "Casual wear for everyday style",
+    },
+  ],
+};
+const staticDummyData2 = {
+  heading: "Chic and Sophisticated",
+  title: "Find your perfect outfit, step out in style",
   link: "/fashion", // Link to the relevant page
   images: [
     {
@@ -60,7 +79,17 @@ export default function Home() {
         title={staticDummyData.title}
         link={staticDummyData.link}
         images={staticDummyData.images}
-        background="bg-gradient-to-bl from-green-400 via-lime-300 to-lime-300"
+        background="bg-[#c9e70f]"
+       
+      />
+      <Collection
+        heading={staticDummyData2.heading}
+        title={staticDummyData2.title}
+        link={staticDummyData2.link}
+        images={staticDummyData2.images}
+        background="bg-black"
+        isDark={true}
+        
       />
     </main>
   );

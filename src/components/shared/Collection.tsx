@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from "react";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,7 +12,6 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import Image, { StaticImageData } from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 
-// Define ImageData and HeadingTitleLink interfaces
 interface ImageData {
   src: string | StaticImageData;
   alt: string;
@@ -23,17 +22,21 @@ interface HeadingTitleLink {
   title: string;
   link: string;
   background?: string;
+  isDark?: boolean; // New prop to control dark mode
   images: ImageData[];
 }
 
-// Type definition for content
 type Content = HeadingTitleLink;
 
-const Collection: React.FC<Content> = ({ heading, title, link, images, background }) => {
-  const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+const Collection: React.FC<Content> = ({ heading, title, link, images, background, isDark }) => {
+  const plugin = React.useRef(Autoplay({ delay: 1000, stopOnInteraction: true }));
+
+  // Apply conditional text color
+  const textColor = isDark ? 'text-white' : 'text-black';
+  const borderColor = isDark ? 'border-white' : 'border-black';
 
   return (
-    <section className={`flex-col px-3 py-5 space-y-5 w-full justify-between items-center ${background || 'bg-primary-theme2'} h-fit md:text-left text-center`}>
+    <section className={`flex-col px-3 py-5 space-y-5 w-full justify-between items-center ${background  || 'bg-primary-theme2'} h-fit md:text-left text-center ${textColor}`}>
       <div className="flex md:flex-row flex-col-reverse w-full justify-between items-center h-fit md:py-7 py-5 lg:py-10">
         <div className="flex-1 flex-col justify-center items-center md:px-7 lg:px-10 md:w-1/2 space-y-6">
           <h4>{heading}</h4>
@@ -41,7 +44,7 @@ const Collection: React.FC<Content> = ({ heading, title, link, images, backgroun
             {title}
           </h1>
           <div className="space-y-8 ">
-            <Link href='/shop' className="border-b border-b-black py-3">Shop Now</Link>
+            <Link href='/shop' className={`border-b py-3 ${borderColor}`}>Shop Now</Link>
           </div>
         </div>
 
@@ -49,7 +52,7 @@ const Collection: React.FC<Content> = ({ heading, title, link, images, backgroun
         <div className="flex-1 flex justify-center items-center md:w-1/2 pt-4 px-6">
           <Carousel
             plugins={[plugin.current]}
-            className="w-full"
+            className="w-full "
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
           >
@@ -57,12 +60,12 @@ const Collection: React.FC<Content> = ({ heading, title, link, images, backgroun
               {images.map((item, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-1 md:basis-1/1 lg:basis-1.5/2 bg-transparent"
+                  className="pl-1 md:basis-1/1 lg:basis-2/1 bg-transparent"
                 >
                   <div className="p-1">
                     <Card className="bg-transparent border-none shadow-none">
-                      <CardContent className="flex bg-transparent items-center justify-center max-h-[400px] w-auto">
-                        <Image src={item.src} alt={item.alt} width={400} height={400} objectFit="cover" className="max-h-[400px] w-auto" />
+                      <CardContent className="flex bg-transparent items-center justify-center max-h-[200px] md:max-h-[300px]  lg:max-h-[400px] lg:w-full w-auto">
+                        <Image src={item.src} alt={item.alt} width={400} height={400} objectFit="cover" className="lg:min-h-[400px] w-auto" />
                       </CardContent>
                     </Card>
                   </div>
@@ -73,12 +76,12 @@ const Collection: React.FC<Content> = ({ heading, title, link, images, backgroun
         </div>
       </div>
 
-      <hr className="border-black" />
+      <hr className={`${borderColor}`} />
       <div className="px-3 flex gap-4">
-        <Link href={link} className="flex w-fit h-fit gap-2 justify-center items-center bg-transparent border border-gray-900 text-gray-900 px-4 py-2 rounded-full hover:cursor-pointer">
+        <Link href={link} className={`flex w-fit h-fit gap-2 justify-center items-center bg-transparent border px-4 py-2 rounded-full hover:cursor-pointer ${borderColor}`}>
           <GoPlus /> Discover
         </Link>
-        <Link href='/learn-more' className="flex w-fit h-fit gap-2 justify-center items-center bg-transparent text-gray-900 px-4 py-2 rounded-full hover:cursor-pointer">
+        <Link href='/learn-more' className={`${textColor } flex w-fit h-fit gap-2 justify-center items-center bg-transparent  px-4 py-2 rounded-full hover:cursor-pointer`}>
           Learn more <FaLongArrowAltRight />
         </Link>
       </div>
