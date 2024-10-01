@@ -62,7 +62,14 @@ export default function Home() {
         heading="Taxing Laughter:"
         subHeading="The People of the Kingdom"
       />
-
+     
+      <Collection
+        heading={staticDummyData.heading}
+        title={staticDummyData.title}
+        link={staticDummyData.link}
+        images={staticDummyData.images}
+        background="bg-[#c9e70f]"
+      />
       <ProductSlider
         imageUrl={product1}
         hoverImageUrl={Hproduct}
@@ -75,21 +82,12 @@ export default function Home() {
         productUrl="/product/urban-sleeve-shirt"
       />
       <Collection
-        heading={staticDummyData.heading}
-        title={staticDummyData.title}
-        link={staticDummyData.link}
-        images={staticDummyData.images}
-        background="bg-[#c9e70f]"
-       
-      />
-      <Collection
         heading={staticDummyData2.heading}
         title={staticDummyData2.title}
         link={staticDummyData2.link}
         images={staticDummyData2.images}
         background="bg-black"
         isDark={true}
-        
       />
     </main>
   );
