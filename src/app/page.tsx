@@ -9,6 +9,7 @@ import Collection from "@/components/shared/Collection";
 import p1 from "@/public/assets/products/pexels-3motional-studio-407102-1081685.jpg";
 import p2 from "@/public/assets/products/pexels-anastasiya-gepp-654466-2065203.jpg";
 import p3 from "@/public/assets/products/pexels-kqpho-1921168.jpg";
+import HomeSlider from "@/components/widgets/HomeSlider";
 
 const staticDummyData = {
   heading: "Find your signature style",
@@ -62,6 +63,9 @@ export default function Home() {
         heading="Taxing Laughter:"
         subHeading="The People of the Kingdom"
       />
+
+
+      <HomeSlider hoverImageUrl={p1} imageUrl={p2} brand="zara" item={4} title="Zara style" link={'/'}/>
      
       <Collection
         heading={staticDummyData.heading}
