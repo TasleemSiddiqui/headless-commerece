@@ -54,8 +54,8 @@ export default function RootLayout({
           <Navbar />
 
           {children}
-          <BottomNav navItems={navItems} />
           <Footer />
+          <BottomNav navItems={navItems} />
         </Wrapper>
       </body>
     </html>

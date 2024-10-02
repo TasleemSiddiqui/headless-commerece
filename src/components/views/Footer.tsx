@@ -154,7 +154,8 @@ const brandSections: IPage[] = [
 ];
 const Footer = () => {
   return (
-    <footer className={`footer h-fit bg-primary-theme2 text-white w-full font-sans font-medium`}>
+    <footer className="mb-16 lg:mb-0">
+       <div className={`footer h-fit bg-primary-theme2 text-white w-full font-sans font-medium`}>
       {/* section 1 */}
       <div className="h-fit border-b border-b-gray-500 w-full px-2 py-3 lg:px-6 lg:py-10">
         <ul className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-4  ">
@@ -317,7 +318,9 @@ const Footer = () => {
         {" "}
         <span className=" "> &copy 2024 Gulf style | where comfort meet style </span>{" "}
       </div>
+    </div>
     </footer>
+   
   );
 };
 
