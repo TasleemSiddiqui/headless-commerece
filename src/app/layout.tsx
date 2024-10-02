@@ -8,6 +8,16 @@ import Header from "@/components/views/Header";
 import Wrapper from "@/components/shared/Wrapper";
 import MobNav from "@/components/views/MobNav";
 import { Roboto } from "next/font/google";
+import { FaHome, FaHeart, FaUser, FaShoppingBag } from 'react-icons/fa';
+import BottomNav, { NavItem } from "@/components/views/BottomNav";
+
+const navItems: NavItem[] = [
+  { name: 'Home', url: '/', icon: <FaHome /> },
+  { name: 'Favorites', url: '/favorites', icon: <FaHeart /> },
+  { name: 'Account', url: '/account', icon: <FaUser /> },
+  { name: 'My Bag', url: '/bag', icon: <FaShoppingBag /> },
+];
+
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -44,6 +54,7 @@ export default function RootLayout({
           <Navbar />
 
           {children}
+          <BottomNav navItems={navItems} />
           <Footer />
         </Wrapper>
       </body>

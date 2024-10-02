@@ -10,7 +10,8 @@ import p1 from "@/public/assets/products/pexels-3motional-studio-407102-1081685.
 import p2 from "@/public/assets/products/pexels-anastasiya-gepp-654466-2065203.jpg";
 import p3 from "@/public/assets/products/pexels-kqpho-1921168.jpg";
 import HomeSlider from "@/components/widgets/HomeSlider";
-
+import CategorySec, { Category } from "@/components/widgets/CategorySec";
+import CoupanSec from "@/components/widgets/CoupanSec";
 const staticDummyData = {
   heading: "Find your signature style",
   title: "Get Dressed to Impress with Our Men's Collection",
@@ -49,6 +50,31 @@ const staticDummyData2 = {
     },
   ],
 };
+const categories: Category[] = [
+  { name: 'Women', url: '/women' },
+  { name: 'Sale', url: '/sale' },
+  { name: 'Footwear', url: '/footwear' },
+  { name: 'Dresses', url: '/dresses' },
+  { name: 'Slippers', url: '/slippers' },
+  { name: 'Men', url: '/men' },
+  { name: 'New', url: '/new' },
+  { name: 'Boots', url: '/boots' },
+  { name: 'Sale', url: '/sale' },
+  { name: 'Kids', url: '/kids' },
+  { name: 'Sports', url: '/sports' },
+  { name: 'Jackets', url: '/jackets' },
+  { name: 'T-shirts', url: '/tshirts' },
+  { name: 'Trousers', url: '/trousers' },
+  { name: 'Clothes', url: '/clothes' },
+  { name: 'Footwear', url: '/footwear' },
+  { name: 'Outdoor Shoes', url: '/outdoor-shoes' },
+  { name: 'Outerwear', url: '/outerwear' },
+  { name: 'Winter Jackets', url: '/winter-jackets' },
+  { name: 'Accessories', url: '/accessories' },
+  { name: 'Sneakers', url: '/sneakers' },
+  { name: 'Sports shoes', url: '/sports-shoes' },
+  { name: 'Skirts', url: '/skirts' },
+];
 
 export default function Home() {
   return (
@@ -59,14 +85,21 @@ export default function Home() {
       <div className="block lg:hidden">
         <MobSlider />
       </div>
+
       <HeadingBar
         heading="Taxing Laughter:"
         subHeading="The People of the Kingdom"
       />
 
+      <HomeSlider
+        hoverImageUrl={p1}
+        imageUrl={p2}
+        brand="zara"
+        item={4}
+        title="Zara style"
+        link={"/"}
+      />
 
-      <HomeSlider hoverImageUrl={p1} imageUrl={p2} brand="zara" item={4} title="Zara style" link={'/'}/>
-     
       <Collection
         heading={staticDummyData.heading}
         title={staticDummyData.title}
@@ -93,6 +126,30 @@ export default function Home() {
         background="bg-black"
         isDark={true}
       />
+      <ProductSlider
+        imageUrl={product1}
+        hoverImageUrl={Hproduct}
+        title="Urban Sleeve Shirt"
+        price={22.0}
+        oldPrice={29.0}
+        discount={24}
+        isOnSale={true}
+        expressDelivery={true}
+        productUrl="/product/urban-sleeve-shirt"
+      />
+      <HeadingBar
+        heading="Trending Item Categories"
+        subHeading="In-Demand Item for the Fashion-Forward"
+      />
+      
+      <CategorySec categories={categories} />
+      <HeadingBar
+        heading="Most Viewed Best Brands"
+        subHeading="Discover Top-Rated Brands"
+      />
+      
+      <CategorySec categories={categories} />
+      <CoupanSec/>
     </main>
   );
 }
