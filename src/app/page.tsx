@@ -81,6 +81,7 @@ export default function Home() {
     <main className="w-full space-y-6">
       <div className="hidden lg:block">
         <Slider />
+   
       </div>
       <div className="block lg:hidden">
         <MobSlider />
